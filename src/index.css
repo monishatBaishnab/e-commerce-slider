@@ -11,3 +11,21 @@
 .swiper-button-prev:after, .swiper-button-next:after{
     display: none;
 }
+
+.swiper-custom-bullet {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: #e2e8f0;
+    margin-left: 5px;
+    border-radius: 5px;
+    transition: width 0.15s;
+    cursor: pointer;
+}
+  
+.swiper-custom-bullet.swiper-custom-bullet-active {
+    display: inline-block;
+    height: 10px;
+    width: 30px;
+    background-color: orange;
+}
