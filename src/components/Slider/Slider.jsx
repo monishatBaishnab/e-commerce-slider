@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import products from './products';
-import { FaHeart, FaSearch } from "react-icons/fa";
+import { FaHeart, FaRegStar, FaSearch, FaStar } from "react-icons/fa";
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6';
 import { LuRefreshCcw } from "react-icons/lu";
 
@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import Rating from 'react-rating';
 
 const SlideBox = ({ product }) => {
     return (
@@ -26,7 +27,14 @@ const SlideBox = ({ product }) => {
                 </div>
             </div>
             <div className="space-y-2">
-                <span className="text-slate-600">{product?.rating}</span>
+                <span>
+                    <Rating
+                        initialRating={product?.rating}
+                        readonly
+                        emptySymbol={<FaRegStar className='text-orange-500' />}
+                        fullSymbol={<FaStar className='text-orange-500' />}
+                    />
+                </span>
                 <h4 className="text-slate-900 text-xl font-medium">{product?.title}</h4>
                 <h3 className="text-red-500 text-2xl font-medium">${product?.price}</h3>
                 <p className="text-base text-slate-500">{product?.desc}</p>
