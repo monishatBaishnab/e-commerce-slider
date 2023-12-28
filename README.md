@@ -1,8 +1,42 @@
-# React + Vite
+# E-commerce Slider
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the E-commerce Slider project! This project showcases a React application built with React&Tailwindcss.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Make sure you have Node.js and npm installed on your machine.
+
+- Node.js: [Download](https://nodejs.org/)
+- npm: Included with Node.js installation
+
+## Local Setup
+
+1. **Clone the Repository:**
+
+    ```bash
+    git clone https://github.com/monishatBaishnab/e-commerce-slider.git
+    cd e-commerce-slider
+    ```
+
+2. **Install Dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3. **Start the Development Server:**
+
+    ```bash
+    npm run dev
+    ```
+
+    Open your browser and go to [http://localhost:5173](http://localhost:5173) to see your application.
+
+4. **Build for Production:**
+
+    ```bash
+    npm run build
+    ```
+
+    Production-ready files will be in the `dist` directory.
+
