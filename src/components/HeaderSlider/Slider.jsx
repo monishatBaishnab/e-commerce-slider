@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import Rating from 'react-rating';
 
-const SlideBox = ({ product }) => {
+const ProductCard = ({ product }) => {
     return (
         <div className="flex flex-col sm:flex-row items-center gap-5 group">
             <div>
@@ -44,39 +44,36 @@ const SlideBox = ({ product }) => {
     )
 }
 
-SlideBox.propTypes = {
+ProductCard.propTypes = {
     product: PropTypes.array,
 }
 
 const Slider = () => {
     return (
-        <div>
-
-            <Swiper
-                modules={[Navigation]}
-                navigation={{
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                }}
-                className="products">
-                <SwiperSlide>
-                    <div className="grid gap-5 grid-cols-1 lg:grid-cols-2">
-                        {
-                            products.slice(0, 4).map(product => <SlideBox key={product.title} product={product} />)
-                        }
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="grid gap-5 grid-cols-1 lg:grid-cols-2">
-                        {
-                            products.slice(4, 8).map(product => <SlideBox key={product.title} product={product} />)
-                        }
-                    </div>
-                </SwiperSlide>
-                <span className='swiper-button-prev service-btn-prev p-2 text-4xl transition-all bg-white shadow-md rounded-full z-40 text-slate-500 hover:bg-orange-500 hover:text-white'><FaAngleLeft /></span>
-                <span className='swiper-button-next service-btn-next p-2 text-4xl transition-all bg-white shadow-md rounded-full z-40 text-slate-500 hover:bg-orange-500 hover:text-white'><FaAngleRight /></span>
-            </Swiper>
-        </div>
+        <Swiper
+            modules={[Navigation]}
+            navigation={{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }}
+            className="products">
+            <SwiperSlide>
+                <div className="grid gap-5 grid-cols-1 lg:grid-cols-2">
+                    {
+                        products.slice(0, 4).map(product => <ProductCard key={product.title} product={product} />)
+                    }
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className="grid gap-5 grid-cols-1 lg:grid-cols-2">
+                    {
+                        products.slice(4, 8).map(product => <ProductCard key={product.title} product={product} />)
+                    }
+                </div>
+            </SwiperSlide>
+            <span className='swiper-button-prev service-btn-prev p-2 text-4xl transition-all bg-white shadow-md rounded-full z-40 text-slate-500 hover:bg-orange-500 hover:text-white'><FaAngleLeft /></span>
+            <span className='swiper-button-next service-btn-next p-2 text-4xl transition-all bg-white shadow-md rounded-full z-40 text-slate-500 hover:bg-orange-500 hover:text-white'><FaAngleRight /></span>
+        </Swiper>
     );
 };
 

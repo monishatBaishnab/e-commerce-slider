@@ -4,10 +4,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { FaRegStar, FaStar } from "react-icons/fa";
-import products from '../Slider/products';
+import products from '../HeaderSlider/products';
 import Rating from 'react-rating';
 
-const SlideBox = ({ product }) => {
+const ProductCard = ({ product }) => {
     return (
         <div className="flex flex-col sm:flex-row items-center gap-5">
             <div>
@@ -31,10 +31,9 @@ const SlideBox = ({ product }) => {
     )
 }
 
-SlideBox.propTypes = {
+ProductCard.propTypes = {
     product: PropTypes.array,
 }
-
 
 const BestSallersSlide = () => {
 
@@ -46,9 +45,6 @@ const BestSallersSlide = () => {
                     <div id="containerForBullets"></div>
                 </div>
             </div>
-            {/* {
-                products.slice(0, 4).map(product => <SlideBox key={product.title} product={product} />)
-            } */}
             <Swiper pagination={{
                 el: "#containerForBullets",
                 type: "bullets",
@@ -61,21 +57,21 @@ const BestSallersSlide = () => {
                 <SwiperSlide>
                     <div>
                         {
-                            products.slice(0, 4).map(product => <SlideBox key={product.title} product={product} />)
+                            products.slice(0, 4).map(product => <ProductCard key={product.title} product={product} />)
                         }
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div>
                         {
-                            products.slice(4, 8).map(product => <SlideBox key={product.title} product={product} />)
+                            products.slice(4, 8).map(product => <ProductCard key={product.title} product={product} />)
                         }
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div>
                         {
-                            products.slice(0, 4).map(product => <SlideBox key={product.title} product={product} />)
+                            products.slice(0, 4).map(product => <ProductCard key={product.title} product={product} />)
                         }
                     </div>
                 </SwiperSlide>

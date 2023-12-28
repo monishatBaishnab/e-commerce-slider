@@ -1,5 +1,5 @@
+import Slider from "./components/HeaderSlider/Slider"
 import BestSallers from "./components/ProductsContainer/BestSallers"
-import Slider from "./components/Slider/Slider"
 
 function App() {
 

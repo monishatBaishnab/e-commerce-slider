@@ -8,9 +8,7 @@ const BestSallers = () => {
                 <img className='w-full h-full object-contain' src={discount} alt="Discount" />
             </div>
             <div>
-                <div>
-                    <BestSallersSlide />
-                </div>
+                <BestSallersSlide />
             </div>
         </div>
     );
