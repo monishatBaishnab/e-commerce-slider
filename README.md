@@ -1,5 +1,7 @@
 # E-commerce Slider
 
+Live link: [E-Commerce-slider](https://keen-lollipop-3f0b7c.netlify.app/)
+
 Welcome to the E-commerce Slider project! This project showcases a React application built with React&Tailwindcss.
 
 ## Prerequisites
